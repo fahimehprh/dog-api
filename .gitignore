@@ -1,0 +1,28 @@
+ Python
+*.py[cod]
+__pycache__/
+*.so
+
+# Django
+*.log
+*.pot
+*.pyc
+local_settings.py
+db.sqlite3
+media
+staticfiles
+
+# Environments
+.venv
+venv/
+
+# Unit test / coverage reports
+.cache
+*.py,cover
+.pytest_cache/
+
+# IDEs
+.idea/
+*.sublime-workspace
+*.sublime-project
+api_tests.http
