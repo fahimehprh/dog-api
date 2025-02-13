@@ -4,16 +4,40 @@ This Django project provides APIs to interact with [the Dog CEO API](https://dog
 
 ## Requirements
 
-- Python 3.x
-- comming later
+- Python 3.9
+- Django 4.2
 
-## Installation
+## How to Run and Test
 
-1. comming later:
+### Running the Project
+
+1. **Clone the repository**:
     ```bash
-    comming later
+    git clone git@github.com:fahimehprh/dog-api.git
+    cd dog-api
     ```
 
+2. **Create and activate a virtual environment**:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+
+3. **Install the dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Run the Django development server**:
+    ```bash
+    python manage.py runserver
+    ```
+
+### Running Tests
+
+ ```bash
+ python manage.py test
+ ```
 
 ## API Endpoints
 
