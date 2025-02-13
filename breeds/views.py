@@ -1,24 +1,26 @@
-from django.http import JsonResponse, HttpRequest
+from django.http import HttpRequest
+
+from .api import api, APIJSONResponse
 from .services import DogService
 
 service = DogService()
 
 
-def list_all_breeds(request: HttpRequest) -> JsonResponse:
-    data = service.list_all_breeds()
-    return JsonResponse(data)
+@api
+def list_all_breeds(request: HttpRequest):
+    return APIJSONResponse(service.list_all_breeds())
 
 
-def list_breed_images(request: HttpRequest, breed: str) -> JsonResponse:
-    data, status = service.list_breed_images(breed)
-    return JsonResponse(data, status=status)
+@api
+def list_breed_images(request: HttpRequest, breed: str):
+    return APIJSONResponse(service.list_breed_images(breed))
 
 
-def random_dog_image(request: HttpRequest) -> JsonResponse:
-    data = service.random_dog_image()
-    return JsonResponse(data)
+@api
+def random_dog_image(request: HttpRequest):
+    return APIJSONResponse(service.random_dog_image())
 
 
-def breed_images_from_random(request: HttpRequest) -> JsonResponse:
-    data, status = service.breed_images_from_random()
-    return JsonResponse(data, status=status)
+@api
+def breed_images_from_random(request: HttpRequest):
+    return APIJSONResponse(service.breed_images_from_random())
