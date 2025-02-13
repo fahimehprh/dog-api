@@ -1,4 +1,3 @@
-
 from abc import ABC, abstractmethod
 from .models import DogImage, BreedImages, BreedList
 
